@@ -1,10 +1,7 @@
 package ru.ushakov.beansjournal.controller
 
 import com.fasterxml.jackson.annotation.JsonFormat
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import ru.ushakov.beansjournal.repository.NotificationRepository
 import java.time.LocalDateTime
 
@@ -15,8 +12,8 @@ class NotificationController(
     private val notificationRepository: NotificationRepository
 ) {
 
-    @GetMapping("/{userId}")
-    fun getNotifications(@PathVariable userId: String): List<NotificationResponse> {
+    @GetMapping
+    fun getNotifications(@RequestHeader(name = "X-UserId", required = true) userId: String): List<NotificationResponse> {
         return notificationRepository.findAllByUserIdOrderByCreatedAtDesc(userId).map {
             NotificationResponse(
                 id = it.id,
