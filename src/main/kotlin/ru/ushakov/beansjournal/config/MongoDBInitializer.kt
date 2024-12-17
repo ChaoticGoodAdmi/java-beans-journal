@@ -1,4 +1,4 @@
-package ru.ushakov.beansmenu.config
+package ru.ushakov.beansjournal.config
 
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Configuration

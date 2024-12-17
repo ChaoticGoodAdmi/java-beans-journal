@@ -1,4 +1,4 @@
-package ru.ushakov.beansmenu.config
+package ru.ushakov.beansjournal.config
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

@@ -15,8 +15,8 @@ spring:
         spring.json.trusted.packages: "*"
   data:
     mongodb:
-      uri: mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?authSource=admin
-      database: beansmenu
+      uri: mongodb://${DB_HOST}/${DB_NAME}?authSource=admin&replicaSet=${DB_REPLICASET}
+      database: beansjournal
   logging:
     level:
       org.springframework.data.mongodb.core: DEBUG

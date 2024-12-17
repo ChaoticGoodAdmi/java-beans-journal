@@ -7,7 +7,6 @@ import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import org.bson.types.ObjectId
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import ru.ushakov.beansmenu.config.ObjectIdSerializer
 
 @Configuration
 class JacksonConfig {

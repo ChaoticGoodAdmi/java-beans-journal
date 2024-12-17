@@ -1,4 +1,4 @@
-package ru.ushakov.beansmenu.config
+package ru.ushakov.beansjournal.config
 
 import com.fasterxml.jackson.core.JsonGenerator
 import com.fasterxml.jackson.databind.JsonSerializer
